@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖經經文對照</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow-x: auto; /* 添加水平捲軸以確保所有內容可見 */
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            background-color: #4a6da7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .btn:hover {
+            background-color: #3a5a8a;
+        }
+        
+        .content {
+            display: flex;
+            transition: all 0.3s ease;
+            min-width: 600px; /* 確保內容區域有最小寬度 */
+        }
+        
+        .side-by-side .column {
+            width: 50%;
+            padding: 0 15px;
+            min-width: 250px; /* 確保每列有最小寬度 */
+        }
+        
+        .top-bottom .column {
+            width: 100%;
+            padding: 15px;
+        }
+        
+        .top-bottom {
+            flex-direction: column;
+        }
+        
+        .verse-section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #4a6da7;
+        }
+        
+        .verse {
+            margin-bottom: 10px;
+        }
+        
+        .verse-num {
+            font-weight: bold;
+            color: #4a6da7;
+        }
+        
+        /* 移除自動調整的響應式設計 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            /* 不再強制改變佈局，讓使用者自行選擇 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>聖經經文對照 - 約翰一書 1 章 / 1 John 1</h1>
+        
+        <div class="controls">
+            <button id="layoutToggle" class="btn">切換顯示模式</button>
+            <button id="fontIncrease" class="btn">增大字體</button>
+            <button id="fontDecrease" class="btn">縮小字體</button>
+        </div>
+        
+        <div id="contentContainer" class="content side-by-side">
+            <!-- Chinese Version -->
+            <div class="column chinese">
+                <div class="verse-section">
+                    <div class="section-title">生命之道</div>
+                    <div class="verse"><span class="verse-num">1</span> 論到從起初原有的生命之道，就是我們所聽見、所看見、親眼看過、親手摸過的－</div>
+                    <div class="verse"><span class="verse-num">2</span> 這生命已經顯現出來，我們看見了，現在又作見證，把原與父同在，並且向我們顯現過的那永遠的生命傳揚給你們－</div>
+                    <div class="verse"><span class="verse-num">3</span> 我們把所看見、所聽見的傳揚給你們，為要使你們也與我們有團契，而我們的團契是與父和他兒子耶穌基督所共有的。</div>
+                    <div class="verse"><span class="verse-num">4</span> 我們把這些事寫給你們，使我們的喜樂得以滿足。</div>
+                </div>
+                
+                <div class="verse-section">
+                    <div class="section-title">神就是光</div>
+                    <div class="verse"><span class="verse-num">5</span> 神就是光，在他毫無黑暗；這是我們從主所聽見，又報給你們的信息。</div>
+                    <div class="verse"><span class="verse-num">6</span> 我們若說，我們與神有團契，卻仍在黑暗裏行走，就是說謊話，不實行真理了。</div>
+                    <div class="verse"><span class="verse-num">7</span> 我們若在光明中行走，如同神在光明中，就彼此有團契，他兒子耶穌的血就洗淨我們一切的罪。</div>
+                    <div class="verse"><span class="verse-num">8</span> 我們若說自己沒有罪，就是欺騙自己，真理就不在我們裏面了。</div>
+                    <div class="verse"><span class="verse-num">9</span> 我們若認自己的罪，神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。</div>
+                    <div class="verse"><span class="verse-num">10</span> 我們若說自己沒有犯過罪，就是把神當作說謊的，他的道就不在我們裏面了。</div>
+                </div>
+            </div>
+            
+            <!-- English Version -->
+            <div class="column english">
+                <div class="verse-section">
+                    <div class="section-title">The Incarnate Word</div>
+                    <div class="verse"><span class="verse-num">1</span> What was from the beginning, what we have heard, what we have seen with our eyes, what we have looked at and touched with our hands, concerning the Word of Life—</div>
+                    <div class="verse"><span class="verse-num">2</span> and the life was revealed, and we have seen and testify and proclaim to you the eternal life, which was with the Father and was revealed to us—</div>
+                    <div class="verse"><span class="verse-num">3</span> what we have seen and heard we proclaim to you also, so that you too may have fellowship with us; and indeed our fellowship is with the Father, and with His Son Jesus Christ.</div>
+                    <div class="verse"><span class="verse-num">4</span> These things we write, so that our joy may be made complete.</div>
+                </div>
+                
+                <div class="verse-section">
+                    <div class="section-title">God Is Light</div>
+                    <div class="verse"><span class="verse-num">5</span> This is the message we have heard from Him and announce to you, that God is Light, and in Him there is no darkness at all.</div>
+                    <div class="verse"><span class="verse-num">6</span> If we say that we have fellowship with Him and yet walk in the darkness, we lie and do not practice the truth;</div>
+                    <div class="verse"><span class="verse-num">7</span> but if we walk in the Light as He Himself is in the Light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin.</div>
+                    <div class="verse"><span class="verse-num">8</span> If we say that we have no sin, we are deceiving ourselves and the truth is not in us.</div>
+                    <div class="verse"><span class="verse-num">9</span> If we confess our sins, He is faithful and righteous, so that He will forgive us our sins and cleanse us from all unrighteousness.</div>
+                    <div class="verse"><span class="verse-num">10</span> If we say that we have not sinned, we make Him a liar and His word is not in us.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get elements
+        const contentContainer = document.getElementById('contentContainer');
+        const layoutToggle = document.getElementById('layoutToggle');
+        const fontIncrease = document.getElementById('fontIncrease');
+        const fontDecrease = document.getElementById('fontDecrease');
+        const verses = document.querySelectorAll('.verse');
+        
+        // Initial font size
+        let currentFontSize = 16;
+        
+        // Set initial layout toggle button text
+        layoutToggle.textContent = '切換為上下對照';
+        
+        // Toggle between side-by-side and top-bottom layouts
+        layoutToggle.addEventListener('click', function() {
+            if (contentContainer.classList.contains('side-by-side')) {
+                contentContainer.classList.remove('side-by-side');
+                contentContainer.classList.add('top-bottom');
+                layoutToggle.textContent = '切換為左右對照';
+            } else {
+                contentContainer.classList.remove('top-bottom');
+                contentContainer.classList.add('side-by-side');
+                layoutToggle.textContent = '切換為上下對照';
+            }
+        });
+        
+        // Increase font size
+        fontIncrease.addEventListener('click', function() {
+            if (currentFontSize < 24) {
+                currentFontSize += 2;
+                updateFontSize();
+            }
+        });
+        
+        // Decrease font size
+        fontDecrease.addEventListener('click', function() {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                updateFontSize();
+            }
+        });
+        
+        // Update font size for all verses
+        function updateFontSize() {
+            verses.forEach(verse => {
+                verse.style.fontSize = currentFontSize + 'px';
+            });
+        }
+        
+        // Initialize font size
+        updateFontSize();
+        
+        // 移除自動檢測螢幕大小的功能，讓使用者自行決定顯示模式
+    </script>
+</body>
+</html>
